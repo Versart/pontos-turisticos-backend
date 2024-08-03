@@ -4,6 +4,8 @@ import cors from "cors";
 
 const app = express();
 routes(app);
-app.use(cors());
+app.use(cors({
+    origin: '*'
+}));
 
 export default app;
