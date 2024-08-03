@@ -16,8 +16,8 @@ datasource db {
 model PontoTuristico {
   id        String @id @default(auto()) @map("_id") @db.ObjectId
   nome      String
-  latitude  Int
-  longitude Int
+  latitude  String
+  longitude String
   foto      String
 
   @@map("pontos_turisticos")
