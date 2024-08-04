@@ -11,6 +11,11 @@ class PontoTuristicoController {
         res.status(200).json(pontosTuristicos);
     }
 
+    async pegarPontoTuristicoPorId(req, res) {
+        const pontoTuristico = await pontoTuristicoService.pegarPontoTuristicoPorId(req);
+        return res.status(200).json(pontoTuristico);
+    }
+
     async cadastrarPontoTuristico(req, res) {
         const pontoTuristicoCadastrado = await pontoTuristicoService.cadastrarPontoTuristico(req);
         res.status(201).json(pontoTuristicoCadastrado.id);
