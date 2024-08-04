@@ -3,7 +3,8 @@ import routes from "./routes/index.js";
 import cors from "cors";
 
 const app = express();
-routes(app);
 app.use(cors());
+routes(app);
+
 
 export default app;
